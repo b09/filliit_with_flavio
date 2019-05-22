@@ -19,7 +19,10 @@
 # include <fcntl.h>		// for open
 # include "./libft/libft.h"
 
+# define CHARS_IN_LINE 21
+# define MAX_TTRS 26
+
 int	get_input(char **lines, char *filename);
 int free_lines(char **lines, int n_lines);
 
-#endif FILLIT_H
+#endif
