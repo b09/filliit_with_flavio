@@ -5,8 +5,8 @@
 /*                                                     +:+                    */
 /*   By: fmiceli <fmiceli@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/01/11 11:56:34 by fmiceli       #+#    #+#                 */
-/*   Updated: 2019/02/02 16:29:06 by fmiceli       ########   odam.nl         */
+/*   Created: 2019/01/11 11:56:34 by fmiceli        #+#    #+#                */
+/*   Updated: 2019/05/22 21:08:21 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-# define TRUE 1
-# define FALSE 0
 # define FT_INT_MIN -2147483648
 # define FT_INT_MAX 2147483647
 
