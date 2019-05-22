@@ -19,4 +19,7 @@
 # include <fcntl.h>		// for open
 # include "./libft/libft.h"
 
+int	get_input(char **lines, char *filename);
+int free_lines(char **lines, int n_lines);
+
 #endif FILLIT_H

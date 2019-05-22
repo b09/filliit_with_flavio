@@ -14,7 +14,7 @@ NAME = fillit
 
 FLAGS = -Wall -Wextra -Werror -g
 
-SRC = fillit.c main.c
+SRC = fillit.c main.c free_lines.c get_input.c
 
 LIB = ./libft
 

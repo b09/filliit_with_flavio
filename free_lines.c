@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   free_lines.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: bprado <bprado@student.codam.nl>             +#+                     */
+/*   By: fmiceli <fmiceli@student.codam.nl...>        +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/05/22 17:14:59 by bprado         #+#    #+#                */
-/*   Updated: 2019/05/22 17:16:45 by bprado        ########   odam.nl         */
+/*   Created: 2019/05/22 18:49:55 by fmiceli       #+#    #+#                 */
+/*   Updated: 2019/05/22 18:49:56 by fmiceli       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		main(int argc, char *argv[])
+int free_lines(char **lines, int n_lines)
 {
-	char	*lines_in_input[MAX_TTRS];
+	int	i;
 
-	if (argc != 2)
+	i = 0;
+	while (i < n_lines)
 	{
-		ft_putendl("usage: ./fillit input_file");
-		return (1);
-	}
-	get_input(lines_in_input, argv[1]);
-	if (!lines_in_input)
-	{
-		ft_putendl("usage: ./fillit input_file");
-		return (1);
+		ft_strdel(&lines[i]);
+		i++;
 	}
 	return (0);
 }
