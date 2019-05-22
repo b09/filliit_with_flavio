@@ -14,7 +14,7 @@ NAME = fillit
 
 FLAGS = -Wall -Wextra -Werror -g
 
-SRC = fillit.c main.c 
+SRC = fillit.c main.c
 
 LIB = ./libft
 
@@ -24,15 +24,15 @@ OBJ += $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): 
-		make -C $(LIB)
+$(NAME):
+		make -C $(LIB) re
 		gcc -o $(NAME) $(SRC) -I $(HDR) $(LIB)/libft.a $(FLAGS)
-		
+
 clean:
 		rm -f $(OBJ)
 		make -C $(LIB) clean
-	
-fclean: clean	
+
+fclean: clean
 		rm -rf $(NAME)
 		make -C $(LIB) fclean
 

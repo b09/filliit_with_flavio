@@ -11,12 +11,12 @@
 /* ************************************************************************** */
 
 #ifndef FILLIT_H
+
 # define FILLIT_H
+
 # include <stdio.h>		// for printf
-# include "libft.h"
 # include <unistd.h>	// for write / read
 # include <fcntl.h>		// for open
-
-
+# include "./libft/libft.h"
 
 #endif FILLIT_H
