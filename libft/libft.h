@@ -6,7 +6,7 @@
 /*   By: fmiceli <fmiceli@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/01/11 11:56:34 by fmiceli        #+#    #+#                */
-/*   Updated: 2019/05/22 21:08:21 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/23 15:10:24 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 
 # define FT_INT_MIN -2147483648
 # define FT_INT_MAX 2147483647
+# define TRUE 1
+# define FALSE 0
 
 typedef struct		s_list
 {

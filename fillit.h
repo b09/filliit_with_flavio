@@ -6,7 +6,7 @@
 /*   By: bprado <bprado@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/22 17:15:32 by bprado         #+#    #+#                */
-/*   Updated: 2019/05/22 21:08:17 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/23 15:10:25 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@
 
 # define CHARS_IN_LINE 21
 # define MAX_TTRS 26
-# define TRUE 1
-# define FALSE 0
+
 
 int	get_input(char **lines, char *filename);
 int free_lines(char **lines, int n_lines);
