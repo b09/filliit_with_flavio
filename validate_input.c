@@ -6,7 +6,7 @@
 /*   By: fmiceli <fmiceli@student.codam.nl...>        +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/22 17:41:52 by fmiceli        #+#    #+#                */
-/*   Updated: 2019/05/22 21:18:03 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/23 15:36:44 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 	correct placement of \n
 */
 
-int		valid_chars_and_newline(char **ttrs)
+static int		valid_chars_and_newline(char **ttrs)
 {
 	int		i;
 	int		j;
@@ -36,7 +36,7 @@ int		valid_chars_and_newline(char **ttrs)
 			temp = ttrs[j][i];
 			if (temp == '#')
 				++hashes;
-			if !(temp == '\n' && (((i + 1) % 5 == 0) || i == 20))
+			if (!(temp == '\n') && (((i + 1) % 5 == 0) || i == 20))
 				return (FALSE);
 			else if ((temp != '.' && temp != '#') && ((i + 1) % 5) && i != 20)
 				return (FALSE);
@@ -49,7 +49,7 @@ int		valid_chars_and_newline(char **ttrs)
 	return (TRUE);
 }
 
-int		valid_type(char **ttrs)
+static int		valid_type(char **ttrs)
 {
 	int		i;
 	int		j;
