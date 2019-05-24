@@ -6,7 +6,7 @@
 /*   By: bprado <bprado@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/22 17:15:32 by bprado         #+#    #+#                */
-/*   Updated: 2019/05/23 20:55:06 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/24 13:22:45 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,7 @@ typedef struct  s_coord
 int				get_input(char **lines, char *filename);
 int				validate_input(char **ttrs);
 t_coord			**transform_input(char **ttrs_lines, size_t number_of_ttrs);
+char			**create_grid(int size);
+void			delete_grid(char **grid);
 
 #endif
