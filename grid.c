@@ -6,23 +6,24 @@
 /*   By: bprado <bprado@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/24 13:10:17 by bprado         #+#    #+#                */
-/*   Updated: 2019/05/24 13:21:33 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/24 20:52:44 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-char	**create_grid(int size)
+static char	**create_grid(int size)
 {
 	int		i;
 	int		j;
 	char	**grid;
 
 	i = 0;
-	grid = (char **)malloc((sizeof (char*) * size) + 1);
+	grid = (char **)malloc((sizeof (char*) * size));
 	while (i < size)
 	{
 		grid[i] = (char*)malloc((sizeof(char) * size) + 1);
+		++i;
 	}
 	i = 0;
 	while (i < size)
@@ -36,18 +37,30 @@ char	**create_grid(int size)
 		grid[i][j] = '\0';
 		++i;
 	}
-	grid[i] = NULL;
 	return (grid);
 }
 
-void	delete_grid(char **grid)
+void		delete_grid(t_grid *grid)
 {
-	int		size;
-	int		i;
+	int	i;
 
 	i = 0;
-	size = ft_strlen(grid[0]);
-	while (i < size + 1)
-		ft_strdel(&grid[i++]);
-	ft_strdel(grid);
+	while (i < grid->size)
+	{
+		ft_strdel(&(grid->grid)[i]);
+		i++;
+	}
+	free(grid);
+	grid = NULL;
+}
+
+t_grid		*init_grid(int size)
+{
+	t_grid	*grid_addr;
+
+	grid_addr = (t_grid*)malloc(sizeof(t_grid));
+	grid_addr->grid = create_grid(size);
+	grid_addr->size = size;
+	grid_addr->letter = 0;
+	return (grid_addr);
 }

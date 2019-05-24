@@ -6,7 +6,7 @@
 /*   By: bprado <bprado@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/23 19:20:43 by bprado         #+#    #+#                */
-/*   Updated: 2019/05/24 13:46:30 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/24 20:03:06 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,14 @@ static void		shift_coords_upper_left(t_coord **ttr)
 	low_x = FT_INT_MAX;
 	low_y = FT_INT_MAX;
 	coord_i = 0;
-	while (coord_i < 4)
+	while (coord_i < MAX_COORDS)
 	{
 		low_x = ft_min(low_x, (*ttr)[coord_i].x);
 		low_y = ft_min(low_y, (*ttr)[coord_i].y);
 		++coord_i;
 	}
 	coord_i = 0;
-	while (coord_i < 4)
+	while (coord_i < MAX_COORDS)
 	{
 		(*ttr)[coord_i].x -= low_x;
 		(*ttr)[coord_i].y -= low_y;

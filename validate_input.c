@@ -6,13 +6,13 @@
 /*   By: fmiceli <fmiceli@student.codam.nl...>        +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/22 17:41:52 by fmiceli        #+#    #+#                */
-/*   Updated: 2019/05/24 13:28:07 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/24 16:21:34 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-static int		valid_chars_and_newline(char **ttrs)
+static int	valid_chars_and_newline(char **ttrs)
 {
 	int		i;
 	int		j;
@@ -42,7 +42,7 @@ static int		valid_chars_and_newline(char **ttrs)
 	return (TRUE);
 }
 
-static int		valid_type(char **ttrs)
+static int	valid_type(char **ttrs)
 {
 	int		i;
 	int		j;
@@ -71,7 +71,7 @@ static int		valid_type(char **ttrs)
 	return (TRUE);
 }
 
-int		validate_input(char **ttrs)
+int			validate_input(char **ttrs)
 {
 	if (valid_type(ttrs) && valid_chars_and_newline(ttrs))
 		return (TRUE);
