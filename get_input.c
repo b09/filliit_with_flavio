@@ -5,12 +5,26 @@
 /*                                                     +:+                    */
 /*   By: fmiceli <fmiceli@student.codam.nl...>        +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/05/22 17:58:52 by fmiceli       #+#    #+#                 */
-/*   Updated: 2019/05/22 17:58:54 by fmiceli       ########   odam.nl         */
+/*   Created: 2019/05/22 17:58:52 by fmiceli        #+#    #+#                */
+/*   Updated: 2019/05/24 13:45:34 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
+
+static int free_lines(char **lines, int n_lines)
+{
+	int	i;
+
+	i = 0;
+	while (i < n_lines)
+	{
+		ft_strdel(&lines[i]);
+		i++;
+	}
+	return (0);
+}
+
 
 static int	read_line(int fd, char *buf, char **line)
 {

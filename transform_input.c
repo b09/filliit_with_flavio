@@ -6,7 +6,7 @@
 /*   By: bprado <bprado@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/23 19:20:43 by bprado         #+#    #+#                */
-/*   Updated: 2019/05/23 20:51:07 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/24 13:46:30 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static t_coord	*transform_line_to_ttr(char *str)
 		}
 		++i;
 	}
-	ft_strdel(str);
+	ft_strdel(&str);
 	return (ttr);
 }
 
@@ -64,7 +64,6 @@ t_coord			**transform_input(char **ttrs_lines, size_t number_of_ttrs)
 {
 	t_coord		**ttrs_output;
 	size_t		n;
-
 
 	n = 0;
 	ttrs_output = (t_coord**)ttrs_lines;

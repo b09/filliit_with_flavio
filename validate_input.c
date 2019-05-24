@@ -6,18 +6,11 @@
 /*   By: fmiceli <fmiceli@student.codam.nl...>        +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/22 17:41:52 by fmiceli        #+#    #+#                */
-/*   Updated: 2019/05/23 15:36:44 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/24 13:28:07 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
-
-/*
-	type of chars ie '.' '#' '\n'
-	correct ttrs type
-	number of #
-	correct placement of \n
-*/
 
 static int		valid_chars_and_newline(char **ttrs)
 {
