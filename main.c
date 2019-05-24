@@ -6,7 +6,7 @@
 /*   By: bprado <bprado@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/22 17:14:59 by bprado         #+#    #+#                */
-/*   Updated: 2019/05/24 13:39:38 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/24 14:04:33 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int		main(int argc, char *argv[])
 		return (1);
 	}
 	ret = get_input(ttrs, argv[1]);
-	printf("ret is: %d", ret);
+	printf("ret is: %d\n", ret);
 	if (ret == 0)
 	{
 		ft_putendl("usage: ./fillit input_file");
