@@ -16,16 +16,16 @@ static char		*input_gen()
 	int			i;
 	char		*str;
 
+	if (n >= 0x10000)
+		return (NULL);
 	i = 0;
 	str = (char*)ft_memalloc(sizeof(char) * (CHARS_IN_LINE + 1));
 	ft_memset(str, '.', CHARS_IN_LINE);
-	if (n > 0x10)
-		return (NULL);
 	while (i < CHARS_IN_LINE)
 	{
 		if (is_newline_pos(i))
 			str[i] = '\n';
-		else if (is_toggled(n, i))
+		else if (is_toggled(n, i - (i / 5)))
 			str[i] = '#';
 		i++;
 	}

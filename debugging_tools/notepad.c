@@ -63,8 +63,6 @@ while (ttrs[n] != NULL)
 	n++;
 }
 
-*/
-
 static void put_coord(t_coord coords)
 {
 	printf("(%d, %d)", coords.x, coords.y)
@@ -85,3 +83,5 @@ static void put_ttr(t_coord *ttr)
 	}
 	ft_putstr(']');
 }
+
+*/
