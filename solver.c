@@ -6,7 +6,7 @@
 /*   By: bprado <bprado@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/24 14:54:36 by bprado         #+#    #+#                */
-/*   Updated: 2019/05/24 23:41:14 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/27 13:36:54 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static void	add_ttr_to_grid(t_coord *ttr, t_grid *grid, int x, int y)
 static void	remove_ttr_from_grid(t_coord *ttr, t_grid *grid, int x, int y)
 {
 	int		i;
-	
+
 	i = 0;
 	while (i < MAX_COORDS)
 	{
@@ -55,7 +55,7 @@ static int	ttr_check_on_grid(t_coord *ttr, t_grid *grid, int x, int y)
 			return (FALSE);
 		if (ft_isalpha(grid->grid[y_ttr][x_ttr]))
 			return (FALSE);
-		 ++i;
+		++i;
 	}
 	return (TRUE);
 }
@@ -65,7 +65,7 @@ static int	ttr_check_all(t_coord **ttr, t_grid *grid, int grid_i, int i)
 	int		x;
 	int		y;
 
- 	if (ttr[i] == NULL)
+	if (ttr[i] == NULL)
 		return (TRUE);
 	while ((grid_i / grid->size) < grid->size)
 	{
@@ -88,15 +88,14 @@ static int	ttr_check_all(t_coord **ttr, t_grid *grid, int grid_i, int i)
 	return (FALSE);
 }
 
-t_grid	*solve(t_coord **ttrs, int n_ttrs)
+t_grid		*solve(t_coord **ttrs, int n_ttrs)
 {
 	int		size;
 	t_grid	*grid;
 
 	size = 2 * ft_sqrt_floor(n_ttrs);
-	// printf("size: %d\n", size);
 	grid = init_grid(size);
-	while(!ttr_check_all(ttrs, grid, 0, 0))
+	while (!ttr_check_all(ttrs, grid, 0, 0))
 	{
 		delete_grid(grid);
 		size++;

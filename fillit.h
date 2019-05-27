@@ -6,7 +6,7 @@
 /*   By: bprado <bprado@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/22 17:15:32 by bprado         #+#    #+#                */
-/*   Updated: 2019/05/24 20:01:13 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/27 13:37:20 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 # define FILLIT_H
 
-# include <stdio.h>		// for printf
-# include <unistd.h>	// for write / read
-# include <fcntl.h>		// for open
+# include <stdio.h>
+# include <unistd.h>
+# include <fcntl.h>
 # include "./libft/libft.h"
 
 # define CHARS_IN_LINE 21
 # define MAX_TTRS 26
 # define MAX_COORDS 4
 
-typedef struct  s_coord
+typedef struct	s_coord
 {
 	char		x;
 	char		y;
 }				t_coord;
 
-typedef struct  s_grid
+typedef struct	s_grid
 {
 	char		**grid;
 	char		size;

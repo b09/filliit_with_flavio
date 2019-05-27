@@ -6,16 +6,16 @@
 /*   By: bprado <bprado@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/22 17:14:59 by bprado         #+#    #+#                */
-/*   Updated: 2019/05/24 20:45:28 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/27 13:36:04 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-static void read_line_input_variable(t_coord **lines)
+static void	read_line_input_variable(t_coord **lines)
 {
-	int i;
-	int	j;
+	int		i;
+	int		j;
 
 	i = 0;
 	while (lines[i] != NULL)
@@ -31,9 +31,9 @@ static void read_line_input_variable(t_coord **lines)
 	}
 }
 
-static void read_grid(t_grid *grid)
+static void	read_grid(t_grid *grid)
 {
-	int i;
+	int		i;
 
 	i = 0;
 	while (i < grid->size)
@@ -43,7 +43,7 @@ static void read_grid(t_grid *grid)
 	}
 }
 
-int		main(int argc, char *argv[])
+int			main(int argc, char *argv[])
 {
 	int		ret;
 	char	*ttrs[MAX_TTRS + 1];
@@ -67,6 +67,5 @@ int		main(int argc, char *argv[])
 	grid = solve(ttrs_output, ret);
 	printf("yo\n");
 	read_grid(grid);
-	
 	return (0);
 }

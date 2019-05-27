@@ -6,7 +6,7 @@
 /*   By: bprado <bprado@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/23 19:20:43 by bprado         #+#    #+#                */
-/*   Updated: 2019/05/24 20:03:06 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/27 13:32:31 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static t_coord	*transform_line_to_ttr(char *str)
 	t_coord		*ttr;
 	int			i;
 	int			hash;
-	
+
 	ttr = (t_coord*)malloc(sizeof(t_coord) * 4);
 	hash = 0;
 	i = 0;
@@ -57,7 +57,6 @@ static void		shift_coords_upper_left(t_coord **ttr)
 		(*ttr)[coord_i].y -= low_y;
 		++coord_i;
 	}
-
 }
 
 t_coord			**transform_input(char **ttrs_lines, size_t number_of_ttrs)
