@@ -6,11 +6,20 @@
 /*   By: fmiceli <fmiceli@student.codam.nl...>        +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/22 17:41:52 by fmiceli        #+#    #+#                */
-/*   Updated: 2019/05/24 16:21:34 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/27 13:48:02 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
+
+static int	character_placed_at_legal_position(char c, int i)
+{
+	if (!(c == '\n') && (((i + 1) % 5 == 0) || i == 20))
+		return (FALSE);
+	else if ((c != '.' && c != '#') && ((i + 1) % 5) && i != 20)
+		return (FALSE);
+	return (TRUE);
+}
 
 static int	valid_chars_and_newline(char **ttrs)
 {
@@ -29,9 +38,7 @@ static int	valid_chars_and_newline(char **ttrs)
 			temp = ttrs[j][i];
 			if (temp == '#')
 				++hashes;
-			if (!(temp == '\n') && (((i + 1) % 5 == 0) || i == 20))
-				return (FALSE);
-			else if ((temp != '.' && temp != '#') && ((i + 1) % 5) && i != 20)
+			if (!character_placed_at_legal_position(temp, i))
 				return (FALSE);
 			++i;
 		}
