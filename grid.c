@@ -6,7 +6,7 @@
 /*   By: bprado <bprado@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/24 13:10:17 by bprado         #+#    #+#                */
-/*   Updated: 2019/05/27 13:32:00 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/27 14:05:54 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ t_grid		*init_grid(int size)
 {
 	t_grid	*grid_addr;
 
+	printf("init grid with size: %d\n", size);
 	grid_addr = (t_grid*)malloc(sizeof(t_grid));
 	grid_addr->grid = create_grid(size);
 	grid_addr->size = size;

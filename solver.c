@@ -6,7 +6,7 @@
 /*   By: bprado <bprado@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/24 14:54:36 by bprado         #+#    #+#                */
-/*   Updated: 2019/05/27 13:36:54 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/27 14:15:43 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ t_grid		*solve(t_coord **ttrs, int n_ttrs)
 	int		size;
 	t_grid	*grid;
 
-	size = 2 * ft_sqrt_floor(n_ttrs);
+	size = ft_sqrt_ceil(4 * n_ttrs);
 	grid = init_grid(size);
 	while (!ttr_check_all(ttrs, grid, 0, 0))
 	{
