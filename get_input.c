@@ -57,7 +57,7 @@ int			get_input(char **lines, char *filename)
 		n_lines++;
 		buf[ret] = 0;
 	}
-	if (n_lines == MAX_TTRS || ret != CHARS_IN_LINE - 1)
+	if (n_lines > MAX_TTRS || ret != CHARS_IN_LINE - 1)
 		return (free_lines(lines, n_lines));
 	lines[n_lines] = NULL;
 	return (n_lines);

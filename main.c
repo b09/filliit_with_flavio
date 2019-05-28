@@ -52,7 +52,7 @@ int			main(int argc, char *argv[])
 	ret = get_input(ttrs, argv[1]);
 	if (ret == 0 || validate_input(ttrs, ret) == FALSE)
 	{
-		ft_putendl("usage: ./fillit input_file");
+		ft_putendl("error");
 		return (1);
 	}
 	ttrs_output = transform_input(ttrs, ret);

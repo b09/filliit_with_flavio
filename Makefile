@@ -12,7 +12,7 @@
 
 NAME = fillit
 
-FLAGS = -Wall -Wextra -Werror -g
+FLAGS = -Wall -Wextra -Werror
 
 SRC = main.c get_input.c validate_input.c transform_input.c grid.c solver.c
 
