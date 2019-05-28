@@ -22,6 +22,7 @@ int			free_lines(char **lines, int n_lines)
 		ft_strdel(&lines[i]);
 		i++;
 	}
+	free(lines);
 	return (0);
 }
 

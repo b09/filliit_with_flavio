@@ -14,7 +14,6 @@
 
 # define FILLIT_H
 
-# include <stdio.h>
 # include <unistd.h>
 # include <fcntl.h>
 # include "./libft/libft.h"

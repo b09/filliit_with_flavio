@@ -50,6 +50,7 @@ void		delete_grid(t_grid *grid)
 		ft_strdel(&(grid->grid)[i]);
 		i++;
 	}
+	free(grid->grid);
 	free(grid);
 	grid = NULL;
 }
