@@ -6,13 +6,13 @@
 /*   By: fmiceli <fmiceli@student.codam.nl...>        +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/22 17:58:52 by fmiceli        #+#    #+#                */
-/*   Updated: 2019/05/24 16:22:01 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/28 16:25:15 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-static int	free_lines(char **lines, int n_lines)
+int	free_lines(char **lines, int n_lines)
 {
 	int	i;
 

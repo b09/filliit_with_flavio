@@ -6,7 +6,7 @@
 /*   By: bprado <bprado@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/24 14:54:36 by bprado         #+#    #+#                */
-/*   Updated: 2019/05/27 14:15:43 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/27 17:43:53 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static int	ttr_check_on_grid(t_coord *ttr, t_grid *grid, int x, int y)
 		y_ttr = ttr[i].y + y;
 		if (!((y_ttr < grid->size) && (x_ttr < grid->size)))
 			return (FALSE);
-		if (ft_isalpha(grid->grid[y_ttr][x_ttr]))
+		if (ft_isupper(grid->grid[y_ttr][x_ttr]))
 			return (FALSE);
 		++i;
 	}
