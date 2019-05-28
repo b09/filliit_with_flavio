@@ -6,30 +6,11 @@
 /*   By: bprado <bprado@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/22 17:14:59 by bprado         #+#    #+#                */
-/*   Updated: 2019/05/28 16:27:54 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/28 16:31:42 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
-
-// static void	read_line_input_variable(t_coord **lines)
-// {
-// 	int		i;
-// 	int		j;
-
-// 	i = 0;
-// 	while (lines[i] != NULL)
-// 	{
-// 		j = 0;
-// 		while (j < 4)
-// 		{
-// 			printf("coord y: %d ,", lines[i][j].y);
-// 			printf("coord x: %d\n", lines[i][j].x);
-// 			j++;
-// 		}
-// 		i++;
-// 	}
-// }
 
 static void	read_grid(t_grid *grid)
 {
