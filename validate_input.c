@@ -66,7 +66,7 @@ static int	valid_type(char **ttrs)
 			{
 				num += ((i > 0) && (ttrs[j][i - 1] == '#')) ? 1 : 0;
 				num += ((i < 20) && (ttrs[j][i + 1] == '#')) ? 1 : 0;
-				num += ((i > 5) && (ttrs[j][i - 5] == '#')) ? 1 : 0;
+				num += ((i > 4) && (ttrs[j][i - 5] == '#')) ? 1 : 0;
 				num += ((i < 15) && (ttrs[j][i + 5] == '#')) ? 1 : 0;
 			}
 			++i;

@@ -35,14 +35,28 @@ static char		*input_gen()
 
 int				main(void)
 {
-	char	*str;
+	char	**str;
+	int		i;
+	int		j;
 
-	str = input_gen();
-	while (str != NULL)
+	str = (char**)malloc(sizeof(char*) * 2);
+	str[1] = NULL;
+	str[0] = input_gen();
+	i = 0;
+	j = 0;
+	while (str[0] != NULL)
 	{
-		ft_putstr(str);
-		free(str);
-		str = input_gen();
+		i++;
+		if (validate_input(str))
+		{
+			ft_putstr(str[0]);
+			j++;
+		}
+		free(str[0]);
+		str[0] = input_gen();
 	}
+	ft_putnbr(i);
+	ft_putchar('\n');
+	ft_putnbr(j);
 	return (0);
 }
