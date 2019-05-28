@@ -6,15 +6,15 @@
 /*   By: fmiceli <fmiceli@student.codam.nl...>        +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/22 17:58:52 by fmiceli        #+#    #+#                */
-/*   Updated: 2019/05/24 16:22:01 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/28 16:33:13 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-static int	free_lines(char **lines, int n_lines)
+int			free_lines(char **lines, int n_lines)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	while (i < n_lines)
@@ -27,7 +27,7 @@ static int	free_lines(char **lines, int n_lines)
 
 static int	read_line(int fd, char *buf, char **line)
 {
-	int	ret;
+	int		ret;
 
 	ret = read(fd, buf, CHARS_IN_LINE);
 	(*line) = ft_memdup(buf, CHARS_IN_LINE + 1);

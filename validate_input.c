@@ -6,7 +6,7 @@
 /*   By: fmiceli <fmiceli@student.codam.nl...>        +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/22 17:41:52 by fmiceli        #+#    #+#                */
-/*   Updated: 2019/05/27 13:48:02 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/28 16:25:13 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,9 +78,10 @@ static int	valid_type(char **ttrs)
 	return (TRUE);
 }
 
-int			validate_input(char **ttrs)
+int			validate_input(char **ttrs, int n_lines)
 {
 	if (valid_type(ttrs) && valid_chars_and_newline(ttrs))
 		return (TRUE);
+	free_lines(ttrs, n_lines);
 	return (FALSE);
 }

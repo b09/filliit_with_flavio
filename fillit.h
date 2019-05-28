@@ -6,7 +6,7 @@
 /*   By: bprado <bprado@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/22 17:15:32 by bprado         #+#    #+#                */
-/*   Updated: 2019/05/27 13:37:20 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/28 16:25:11 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,11 @@ typedef struct	s_grid
 }				t_grid;
 
 int				get_input(char **lines, char *filename);
-int				validate_input(char **ttrs);
+int				validate_input(char **ttrs, int n_lines);
 t_coord			**transform_input(char **ttrs_lines, size_t number_of_ttrs);
 void			delete_grid(t_grid *grid);
 t_grid			*solve(t_coord **ttrs, int n_ttrs);
 t_grid			*init_grid(int size);
+int				free_lines(char **lines, int n_lines);
 
 #endif
