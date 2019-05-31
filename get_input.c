@@ -6,7 +6,7 @@
 /*   By: fmiceli <fmiceli@student.codam.nl...>        +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/22 17:58:52 by fmiceli        #+#    #+#                */
-/*   Updated: 2019/05/28 16:33:13 by bprado        ########   odam.nl         */
+/*   Updated: 2019/05/31 17:23:29 by bprado        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int			free_lines(char **lines, int n_lines)
 		ft_strdel(&lines[i]);
 		i++;
 	}
-	free(lines);
 	return (0);
 }
 
@@ -51,7 +50,7 @@ int			get_input(char **lines, char *filename)
 	}
 	n_lines = 0;
 	ret = read_line(fd, buf, &lines[n_lines]);
-	n_lines++;
+	n_lines += (ret > 0) ? 1 : 0;
 	while (n_lines <= MAX_TTRS && ret == CHARS_IN_LINE)
 	{
 		ret = read_line(fd, buf, &lines[n_lines]);
